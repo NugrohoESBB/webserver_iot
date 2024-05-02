@@ -1,0 +1,11 @@
+GET DATA :
+http://(your IP)/postData/webapi/api/create.php?suhu=20.82&kelembaban=88.99
+
+POST DATA :
+http://(your IP)/postData/webapi/api/create.php
+
+IP Rumah sakit
+192.168.0.198
+
+IP zoraa
+192.168.45.59

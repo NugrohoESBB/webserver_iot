@@ -1,0 +1,33 @@
+*** UPDATE SEMUA FIELD TIMESTAMP KE TANGGAL YANG DIINGINKAN ***
+-- Pastikan untuk membuat salinan backup data sebelum menjalankan query ini
+
+-- Update nama_tabel dan nama_kolom sesuai dengan nama tabel dan kolom yang sesuai
+UPDATE nama_tabel
+SET nama_kolom = TIMESTAMPADD(SECOND, (UNIX_TIMESTAMP('2023-12-15 00:00:00') - UNIX_TIMESTAMP()), nama_kolom)
+WHERE nama_kolom BETWEEN '2023-12-15 00:00:00' AND '2023-12-20 23:59:59'
+AND nama_kolom >= '2023-12-15 00:00:00' AND nama_kolom <= '2023-12-20 23:59:59';
+
+
+*** MENAMBAHKAN FIELD BARU DALAM TABLE BESERTA ISI DATANYA ***
+-- Menambahkan kolom baru dengan nama 'field_baru' ke dalam tabel 'nama_tabel'
+ALTER TABLE nama_tabel
+ADD COLUMN field_baru INT;
+
+-- Mengisi data random ke dalam kolom 'field_baru'
+UPDATE nama_tabel
+SET field_baru = FLOOR(RAND() * 100) + 1; -- Menghasilkan angka random antara 1 dan 100
+
+-- Mengisi 101 data random ke dalam kolom 'field_baru'
+UPDATE nama_tabel
+SET field_baru = (SELECT FLOOR(RAND() * 100) + 1)
+WHERE field_baru IS NULL
+LIMIT 101;
+
+
+*** MENGUBAH URUTAN FIELD KE TEMPAT YANG DIINGINKAN ***
+-- Memberikan nama ulang dan menggabungkan kolom 'field_to_move' ke samping kolom 'target_column'
+ALTER TABLE my_table
+CHANGE COLUMN field_to_move new_column_name INT AFTER target_column;
+
+
+*** Membuat db baru ***
