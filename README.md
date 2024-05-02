@@ -2,8 +2,8 @@
 
 <p>1. Paste file zip setelah download file dari repositori ke folder xampp > htdocs</p>
 <p>2. Unzip file tersebut</p>
-<p>3. Ubah nama folder yang di dapat setelah dilakukan unzip yang semula nama foldernya "webserver" menjadi "postData"</p>
-<p>4. Setelah nama foldernya diubah sehingga alur foldernya menjadi xampp > htdocs > postData</p>
+<p>3. Ubah nama folder yang di dapat setelah dilakukan unzip yang semula nama foldernya "webserver_iot" menjadi "iot"</p>
+<p>4. Setelah nama foldernya diubah sehingga alur foldernya menjadi xampp > htdocs > iot</p>
 <br>
 
 
