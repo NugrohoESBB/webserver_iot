@@ -126,11 +126,11 @@ if ((WiFi.status() == WL_CONNECTED)) {
 
 
 <h2>🛠️ PHP Code (create.php)</h2>
-<p>Import database.php and nodemcu_log.php</p>
+<p>Import database.php and mc_log.php</p>
 
 ```php
 include_once '../config/database.php';
-include_once '../class/nodemcu_log.php';
+include_once '../class/mc_log.php';
 ```
 
 <p>Melakukan pengecekan dan publish data ke database</p>
