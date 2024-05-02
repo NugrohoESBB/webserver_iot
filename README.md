@@ -19,8 +19,8 @@ const char* password = "ENTER A VALUE";
 
 ```php
 if ((WiFi.status() == WL_CONNECTED)) {
-    // C:\xampp\htdocs\postData\webapi\api\create.php
-    address ="http://(yourIP)/postData/webapi/api/create.php?suhu=";
+    // C:\xampp\htdocs\iot\webapi\api\create.php
+    address ="http://(yourIP)/iot/webapi/api/create.php?suhu=";
     address += String(suhu);
     address += "&kelembaban="; 
     address += String(kelembaban) ;
@@ -65,8 +65,8 @@ if ((WiFi.status() == WL_CONNECTED)) {
     StaticJsonDocument<200> doc;
     String url, nodemcuData; 
     
-    // C:\xampp\htdocs\postData\webapi\api\create.php
-    url ="http://(yourIP)/postData/webapi/api/create.php";
+    // C:\xampp\htdocs\iot\webapi\api\create.php
+    url ="http://(yourIP)/iot/webapi/api/create.php";
     
     doc["suhu"] = String(suhu);
     doc["kelembaban"] = String(kelembaban);
